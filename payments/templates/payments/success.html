@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <p>
+      Мы ценим ваш бизнес! Если у вас есть какие-либо вопросы, пожалуйста, напишите нам по электронной почте
+      <a href="mailto:orders@example.com">orders@example.com</a>
+    </p>
+    <p>
+      <a href="{% url 'items_list' %}">Список товаров</a>
+    </p>
+{% endblock %}

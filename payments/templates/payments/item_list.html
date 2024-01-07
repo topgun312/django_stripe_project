@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if items %}
+{% for item in items %}
+  <h2>Список товаров:</h2>
+  <ul>
+    <li>
+      <p>Название: <a href="{% url 'item' item.id %}" class="btn btn-primary">{{ item.name }}</a></p>
+      <p>Цена: {{ item.price }}</p>
+    </li>
+  </ul>
+{% endfor %}
+{% else %}
+  <h2>Товаров нет</h2>
+{% endif %}
+{% endblock %}
